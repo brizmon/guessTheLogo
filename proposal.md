@@ -8,7 +8,8 @@ A game that tests your branding knowledge. A set of logos that have been altered
 
 ## Wireframe
 
-(Your wireframes go here. Preferably two or more)
+(1.jpg)
+(2.jpg)
 
 ## Initial thoughts on game structure
 
