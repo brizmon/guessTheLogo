@@ -8,8 +8,8 @@ A game that tests your branding knowledge. A set of logos that have been altered
 
 ## Wireframe
 
-(1.jpg)
-(2.jpg)
+![Image of wireframe - Briseida Montiel](1.jpg)
+![Image of wireframe - Briseida Montiel](2.jpg)
 
 ## Initial thoughts on game structure
 
