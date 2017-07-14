@@ -5,7 +5,14 @@ $(document).ready(function(){
         'img/pepsi.png',
         'img/bp.png',
         'img/doritos.png',
-        'img/wash.gif'
+        'img/wash.gif',
+        'img/best-buy',
+        'img/dasani.png',
+        'img/Del-Monte.svg',
+        'img/DreamWorks.png',
+        'img/Nickelodeon.png',
+        'img/verizon.png',
+        'img/Walt-Disney.jpg',
     ];
 
     const answers = [
@@ -13,7 +20,14 @@ $(document).ready(function(){
         'pepsi',
         'bp',
         'doritos',
-        'wash'
+        'wash',
+        'best buy',
+        'dasani',
+        'del monte',
+        'dreamworks',
+        'nickelodeon',
+        'verizon',
+        'walt disney'
     ];
 
     const answerChoices = [
@@ -21,8 +35,17 @@ $(document).ready(function(){
         ['coca cola', 'pepsi', 'redbull'],
         ['hello', 'bp', 'hi'],
         ['sabritas', 'doritos', 'cheetos'],
-        ['wosh', 'wush', 'wash']
+        ['wosh', 'wush', 'wash'],
+        ['ag', 'eg', 'ig'],
+        ['og', 'ug', 'ux'],
+        ['ah', 'eh', 'ih'],
+        ['oh', 'uh', 'uxx'],
+        ['ar', 'er', 'ir'],
+        ['or', 'ur', 'uxxx'],
+        ['az', 'ezz', 'izz'],
     ];
+
+   
 
     const $imgDisplay = $('<div id="img-display"/>').appendTo('body');
     const $logoImage = $('<img id="logo-image"/>').appendTo('#img-display');
@@ -34,28 +57,24 @@ $(document).ready(function(){
     const $scoreBox = $('<div id="score-box"/>').appendTo('body');
 
     
-    const index = 0;
+    let index = 0;
+    let score=0; 
     //index++;
     
-
-
     function setUpDisplay(index){
         let logoAddress = logos[index];
         $('#logo-image').attr('src', logoAddress);
     };
   
-    
-    
     function setUpAnswerChoices(choicesArrayIndex){
         let answerChoicesArray=answerChoices[choicesArrayIndex]; 
         for(let idIndex=0; idIndex<3; idIndex++){
             $(`#${idIndex}`).text(`${answerChoicesArray[idIndex]}`);
         }
     };
-    setUpDisplay(index);
-    setUpAnswerChoices(index);
+    
 
-let timeCounter=5; 
+    let timeCounter=5; 
 
     let timer = setInterval(function(){      
         $('#timer').text(timeCounter);
@@ -66,22 +85,68 @@ let timeCounter=5;
         timeCounter--;            
     }, 1000);
 
+    function updateScore(){
+        $('#score-box').text(`${score+=5}`);
+    }
+    //updateScore();
+
+    function compareAnswers(pickedChoice){
+        if(pickedChoice === answers[index]){
+            index++;
+            setUpDisplay(index);
+            setUpAnswerChoices(index);
+            //score=+5;
+            updateScore();
+            return `${pickedChoice} is correct`;
+        }else {
+            return 'no';
+        }
+    };
     
-    
 
 
 
 
 
 
-
-
-
+let pickedChoice=null;
 
 window.onload = function() {
-  $('.answers').on('click', );
-  
+    setUpDisplay(0);
+    setUpAnswerChoices(0);
+    for(let i=0; i<3; i++){
+        $(`#${i}`).on('click', function(){
+            
+        pickedChoice=$(this).text();
+        console.log(pickedChoice);
+        console.log(pickedChoice); 
+        console.log(compareAnswers(pickedChoice)) ;
+    
+        // for(let i=0; i<3; i++){
+        //     $(`#${i}`).off('click');
+        // }
+
+        });
+    };
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
