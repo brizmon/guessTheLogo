@@ -69,7 +69,16 @@ body {
 #welcome-screen {
     width: 100%;
     height: 100vh;
-    background: #363dc2;
+    background: #19B5FE;
+}
+#welcome-screen p {
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    font-size: 30px;
+    padding: 100px 170px 0 170px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
 }
 #headline {
     font-size: 110px;
@@ -81,7 +90,21 @@ body {
     display: block;
     margin: 0 auto;
     position: relative;
-    top: 50%;
+    top: 10%;
+}
+button {
+    border: none;
+    background: #F7CA18;
+    padding: 30px;
+    font-size: 25px;
+    border-radius: 20px;
+    font-family: 'nexa_boldregular';
+    cursor: pointer;
+    color: #22313F;
+}
+button:hover {
+    background: #22313F;
+    color: #F7CA18;
 }
 #img-display {
     background: white;
@@ -89,6 +112,13 @@ body {
     height: 300px;
     margin: 0 auto;
     margin-top: 150px;
+}
+#wrong-answer {
+    font-size: 150px;
+    position: relative;
+    top: -515px;
+    text-align: center;
+    color: blue;
 }
 #answers-container {
     width: 600px;
@@ -102,7 +132,7 @@ body {
     width: 30%;
     height: 50px;
     text-align: center;
-    font-size: 23px;
+    font-size: 22px;
     cursor: pointer;
     color: #BDC3C7;
 }
@@ -110,32 +140,49 @@ body {
     color: #000;
 }
 #timer {
-    width: 0%;
-    height: 100vh;
-    background: crimson;
-    position: absolute;
-    top: 0;
-    z-index: -99;
+    position: relative;
+    top: -575px;
+    font-size: 200px;
+    color: lightgray;
+    opacity: .4;
+    float: right;
+    margin-right: 20px;
 }
 
 #score-box {
-    width: 130px;
+    width: 180px;
     height: 100px;
-    background: #BF55EC;
     position: relative;
-    top: -550px;
+    top: -560px;
     margin: 0 auto;
     text-align: center;
     font-size: 70px;
     line-height: 1.5;
-    color: #FFF;
+    color: #BF55EC;
 }
 img {
     max-width: 100%;
 }
 #game-over {
     display: none;
-    background: cyan;
+    background: #BF55EC;
     width: 100%;
     height: 100vh;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 150px;
+    color: #FFF;
 }
+#win-display {
+    display: none;
+    background: #BF55EC;
+    width: 100%;
+    height: 100vh;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 150px;
+    color: #FFF;
+}
+
+
+
